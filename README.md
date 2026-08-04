@@ -1,11 +1,11 @@
-﻿# 🏡 EstateFlow — Ultra-Luxury Real Estate & Advisory Platform
+﻿# 🏡 EstateFlow — Modern Real Estate Listing & Property Management Platform
 
-Premier real estate platform for luxury architectural estates, off-market penthouses, 360° virtual tours, neighborhood guides, and private property inquiries.
+Premium real estate platform for luxury property listings, interactive virtual tours, broker directory, and tour scheduling.
 
-## 🛠 Tech Stack
+## 🛠️ Tech Stack
 - **Framework**: Next.js 14 (App Router)
 - **Language**: TypeScript & React 18
-- **Styling**: TailwindCSS
+- **Styling**: TailwindCSS & Lucide Icons
 - **Database**: Prisma ORM & SQLite
 
 ## 🚀 Quick Start
@@ -14,6 +14,7 @@ npm install
 npx prisma db push
 npm run db:seed
 npm run dev
-``n
+`
+
 ## 📄 License
 MIT License.
