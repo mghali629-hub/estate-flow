@@ -1,0 +1,77 @@
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Property {
+  id          Int      @id @default(autoincrement())
+  title       String
+  location    String
+  price       Float
+  beds        Int
+  baths       Float
+  sqft        Int
+  type        String
+  image       String
+  description String
+  agent       String
+  createdAt   DateTime @default(now())
+}
+
+model Agent {
+  id         Int      @id @default(autoincrement())
+  name       String
+  role       String
+  sales      String
+  specialty  String
+  phone      String
+  image      String
+}
+
+model Favorite {
+  id         Int      @id @default(autoincrement())
+  propertyId Int
+  createdAt  DateTime @default(now())
+}
+
+model TourRequest {
+  id         Int      @id @default(autoincrement())
+  propertyId Int
+  guestName  String
+  phone      String
+  date       String
+  status     String   @default("PENDING")
+  createdAt  DateTime @default(now())
+}
+
+model Neighborhood {
+  id          Int      @id @default(autoincrement())
+  name        String
+  slug        String   @unique
+  description String
+  avgPrice    String
+  image       String
+}
+
+model BlogPost {
+  id        Int      @id @default(autoincrement())
+  slug      String   @unique
+  title     String
+  author    String
+  content   String
+  image     String
+  createdAt DateTime @default(now())
+}
+
+model LoanApplication {
+  id          Int      @id @default(autoincrement())
+  name        String
+  email       String
+  loanAmount  Float
+  income      Float
+  createdAt   DateTime @default(now())
+}
